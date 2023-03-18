@@ -146,7 +146,7 @@ void AGriffonControllerCharacter::Tick(float DeltaSeconds)
 
 	if (bIsFlying)
 	{
-		FlyPhysicsCompute();
+		FlyPhysicsCompute(DeltaSeconds);
 	}
 	
 	DrawDebug();
@@ -181,6 +181,11 @@ void AGriffonControllerCharacter::StopFlying()
 	GetCharacterMovement()->RotationRate = DefaultRotationRateValue;
 	GetCharacterMovement()->MaxAcceleration = DefaultMaxAccelerationValue;
 	GetCharacterMovement()->MaxWalkSpeed = DefaultMaxWalkSpeedValue;
+
+	FRotator rotation = GetActorRotation();
+	SetActorRotation(FRotator(0, rotation.Yaw, 0));
+
+	GetCharacterMovement()->Velocity /= 5; // Slow when landing
 }
 
 void AGriffonControllerCharacter::StopFlapping()
@@ -188,27 +193,27 @@ void AGriffonControllerCharacter::StopFlapping()
 	bIsFlapping = false;
 }
 
-void AGriffonControllerCharacter::FlyPhysicsCompute()
+void AGriffonControllerCharacter::FlyPhysicsCompute(float DeltaSeconds)
 {
 	FVector ActorVelocity = GetVelocity();
-	FVector ActorVelocityNormalized = GetVelocity();
-	ActorVelocityNormalized.Normalize();
 	FRotator ControlRotation = GetControlRotation();
 	FRotator ActorRotation = GetActorRotation();
 
 	// INCLINATION // 22:00
-	// Get how much the camera is aiming to the actor forward
+	// Get how much the camera is aiming to the actor forward in Z
 	ControlInclination = FVector::DotProduct(UKismetMathLibrary::GetUpVector(ControlRotation),
-											UKismetMathLibrary::GetForwardVector(ActorRotation)); // 1 parallel, 0 perpendicular, -1 parallel opposite
-
-	// CALCULATE LIFT // 16:00
-	// Get how much the camera is aiming to the actor forward
-	FVector VelocityCurveLiftTime = ActorVelocity; // 19:00 check clamp -4000 Z axis
-	VelocityCurveLiftTime.Z = UKismetMathLibrary::FClamp(VelocityCurveLiftTime.Z, -4000, 0);
-
-	float ControlInclinationAngle = acos(ControlInclination) - 90;
+											UKismetMathLibrary::GetForwardVector(FRotator(0, ActorRotation.Yaw, 0))); // 1 parallel, 0 perpendicular, -1 parallel opposite
 	
-	LiftNormalized =	FlightAngleLiftMultiplierCurve->GetFloatValue(ControlInclinationAngle) *
+	// CALCULATE LIFT // 16:00
+	// Get how much the camera is aiming to the actor forward in Z
+	FVector VelocityCurveLiftTime = ActorVelocity; // 19:00
+	VelocityCurveLiftTime.Z = UKismetMathLibrary::FClamp(VelocityCurveLiftTime.Z, -4000, 0); // only take negative value
+
+	float ControlInclinationAngle = UKismetMathLibrary::DegAcos(ControlInclination) - 90;
+	GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0, FColor::Red, FString::Printf(TEXT("ControlInclinationAngle: %f"), ControlInclinationAngle));
+
+	
+	LiftNormalized =	FlightVelocityAngleMultiplierCurve->GetFloatValue(ControlInclinationAngle) *
 						FlightVelocityLiftMultiplierCurve->GetFloatValue(VelocityCurveLiftTime.Length());
 
 	int32 roundedLiftNormalized = round(LiftNormalized);
@@ -219,19 +224,19 @@ void AGriffonControllerCharacter::FlyPhysicsCompute()
 	//else
 
 	// GLIDE // 28:00
-	// Add default Movement Input in the glide direction to glide longer
+	// Add default Movement Input in the glide direction to glide
 	// and it allow to go faster when going down and slower when going up
 	float ScaleGlidingSpeed = UKismetMathLibrary::MapRangeClamped(ActorVelocity.Z,	-500, 0,
-																						1.5, 0); // To get faster when going down and slower going up
-
-	FlySpeedGliding = FMath::FInterpTo(FlySpeedGliding, ScaleGlidingSpeed, GetWorld()->GetDeltaSeconds(),
-																			abs(ControlInclination) + 0.05);
+																						1.5, 0);
+	FlySpeedGliding = FMath::FInterpTo(FlySpeedGliding, ScaleGlidingSpeed, DeltaSeconds,
+																			abs(ControlInclination) + 0.5);
 	
 	FVector GlidingDirection = UKismetMathLibrary::GetForwardVector(FRotator(0, ControlRotation.Yaw, 0)); // looking direction
+	GlidingDirection.Normalize();
 	AddMovementInput(GlidingDirection, FlySpeedGliding);
 	
 	// ADD LIFT FORCE //
-	// What make us fall down
+	// What make us glide better when faster
 	float LiftForce =	GetCharacterMovement()->Mass *
 						abs(GetWorld()->GetGravityZ()) *
 						LiftNormalized;
@@ -239,7 +244,7 @@ void AGriffonControllerCharacter::FlyPhysicsCompute()
 	GetCharacterMovement()->AddForce({0, 0, LiftForce});
 
 	// VELOCITY // 39:00
-	// If can fly we add velocity (pretty much the flying system)
+	// If can fly we add velocity UP/DOWN on Z (pretty much the flying system)
 	if (bCanFly)
 	{
 		FVector ActualCharacterVelocity = GetCharacterMovement()->Velocity;
@@ -249,31 +254,38 @@ void AGriffonControllerCharacter::FlyPhysicsCompute()
 								abs(ControlInclination) *
 								10;
 		
-		float NextVelocityZ = FMath::FInterpTo(ActualCharacterVelocity.Z, TargetVelocityZ, GetWorld()->GetDeltaSeconds(), 4);
-		float ClampedNextVelocityZ = UKismetMathLibrary::FClamp(NextVelocityZ, -4000, 2000);
-		
-		GetCharacterMovement()->Velocity = FVector(	ActualCharacterVelocity.X,
-													ActualCharacterVelocity.Y,
-													ClampedNextVelocityZ);
-	}
-	// Calculate Velocity Angle
-	float DotVelocityDownVector = FVector::DotProduct(ActorVelocityNormalized,
-													UKismetMathLibrary::GetUpVector(ActorRotation) * -1);
-	VelocityAngle = acos(DotVelocityDownVector) - 90;
+		float NextVelocityZ = FMath::FInterpTo(ActualCharacterVelocity.Z, TargetVelocityZ, DeltaSeconds, 4);
 
-	FlyingVelocity = ActorVelocity.Length();
+		FVector NewVelocityXY = FMath::VInterpTo(ActualCharacterVelocity, GlidingDirection * ActualCharacterVelocity.Length(), DeltaSeconds, 3);
+		
+		GetCharacterMovement()->Velocity = FVector(	NewVelocityXY.X,
+													NewVelocityXY.Y,
+													NextVelocityZ);
+	}
 
 	// ROTATION // 42:00
 	// Prevent drifting in the air
 	FRotator NewRotation;
 	NewRotation.Pitch = GetCharacterMovement()->Velocity.ToOrientationRotator().Pitch;
-	NewRotation.Roll = ActorRotation.Roll;
 
 	FVector VelocityForwardVector(GetCharacterMovement()->Velocity.X, GetCharacterMovement()->Velocity.Y, 0);
+	VelocityForwardVector.Normalize();
+
+	float TurnInclination = FVector::DotProduct(UKismetMathLibrary::GetRightVector(GetCharacterMovement()->Velocity.ToOrientationRotator()),
+												UKismetMathLibrary::GetForwardVector(FRotator(0, ActorRotation.Yaw, 0)));
+
+	float TurnInclinationAngle = (UKismetMathLibrary::DegAcos(TurnInclination) - 90) * 4; // 4 constant value, just the roll feel way better, it's too small else
+	TurnInclinationAngle = UKismetMathLibrary::FClamp(TurnInclinationAngle, -135, 135);
+	
+	NewRotation.Roll = TurnInclinationAngle;
+	
+	GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0, FColor::Yellow, FString::Printf(TEXT("Roll: %f"), NewRotation.Roll));
+
+
 	FVector ActorRotationRightVector = UKismetMathLibrary::GetRightVector(ActorRotation);
 	NewRotation.Yaw = UKismetMathLibrary::MakeRotationFromAxes(VelocityForwardVector, ActorRotationRightVector, FVector::UpVector).Yaw;
-	
-	SetActorRotation(FMath::RInterpTo(ActorRotation, NewRotation, GetWorld()->GetDeltaSeconds(), 3));
+
+	SetActorRotation(FMath::RInterpTo(ActorRotation, NewRotation, DeltaSeconds, 3));
 
 	//
 	if (!GetCharacterMovement()->IsFalling())
@@ -284,7 +296,9 @@ void AGriffonControllerCharacter::DrawDebug()
 {
 	if (IsDebug == true && GEngine)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("FlySpeedGliding: %f"), FlySpeedGliding));
+		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0, FColor::Yellow, FString::Printf(TEXT("FlySpeedGliding: %f"), FlySpeedGliding));
+		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0, FColor::Blue, FString::Printf(TEXT("Velocity: %f"), GetCharacterMovement()->Velocity.Length()));
+		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0, FColor::Red, FString::Printf(TEXT("ControlInclination: %f"), ControlInclination));
 	}
 }
 

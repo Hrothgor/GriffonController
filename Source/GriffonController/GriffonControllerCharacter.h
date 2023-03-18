@@ -79,7 +79,7 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	bool bIsFlapping = false;
 	
-	void FlyPhysicsCompute();
+	void FlyPhysicsCompute(float DeltaSeconds);
 	
 	// FLY VALUE
 	UPROPERTY(EditAnywhere)
@@ -97,12 +97,12 @@ public:
 	UPROPERTY(EditAnywhere)
 	float MaxWalkSpeedValue = 4000;
 	float DefaultMaxWalkSpeedValue;
- 
+
 	// FLY VARIABLES
 	UPROPERTY(EditAnywhere)
 	UCurveFloat *FlightVelocityLiftMultiplierCurve;
 	UPROPERTY(EditAnywhere)
-	UCurveFloat *FlightAngleLiftMultiplierCurve;
+	UCurveFloat *FlightVelocityAngleMultiplierCurve;
 
 	UPROPERTY(BlueprintReadOnly)
 	float ControlInclination;

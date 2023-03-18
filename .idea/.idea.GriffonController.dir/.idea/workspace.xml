@@ -7,20 +7,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98aa1c23-81ef-4daa-869e-2c4b13822fe0" name="Changes" comment="" />
+    <list default="true" id="98aa1c23-81ef-4daa-869e-2c4b13822fe0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Griffon/C_AngleLiftMultiplier.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Griffon/C_VelocityLiftMultiplier.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Griffon/C_VelocityLiftMultiplier.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/ucrt/corecrt_math.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/Runtime/Engine/Private/UnrealEngine.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/Boost/boost-1_70_0/include/boost/numeric/ublas/io.hpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/CEF3/CEF3.build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/Eigen/unsupported/test/cxx11_tensor_comparisons.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/include/cmath" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/sming/Documents/Unreal Projects/GriffonController/Source/GriffonController/GriffonControllerCharacter.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -97,12 +106,14 @@
       <workItem from="1678945647548" duration="1941000" />
       <workItem from="1679023431578" duration="13883000" />
       <workItem from="1679042648895" duration="7395000" />
+      <workItem from="1679115083851" duration="18280000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
