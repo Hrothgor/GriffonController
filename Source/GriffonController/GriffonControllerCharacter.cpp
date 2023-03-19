@@ -227,7 +227,7 @@ void AGriffonControllerCharacter::FlyPhysicsCompute(float DeltaSeconds)
 	// Add default Movement Input in the glide direction to glide
 	// and it allow to go faster when going down and slower when going up
 	float ScaleGlidingSpeed = UKismetMathLibrary::MapRangeClamped(ActorVelocity.Z,	-500, 0,
-																						1.5, 0);
+																					1.5, 0);
 	FlySpeedGliding = FMath::FInterpTo(FlySpeedGliding, ScaleGlidingSpeed, DeltaSeconds,
 																			abs(ControlInclination) + 0.5);
 	

@@ -8,13 +8,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98aa1c23-81ef-4daa-869e-2c4b13822fe0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Griffon/C_AngleLiftMultiplier.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Griffon/C_VelocityLiftMultiplier.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Griffon/C_VelocityLiftMultiplier.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/4E/W6IBWQHRGVP815P7YPLIP1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/4E/W6IBWQHRGVP815P7YPLIP1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/QA/896728POOPHRPMOPAR0E22.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/QA/896728POOPHRPMOPAR0E22.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/2/KX/TS4U9JA0N6RFTSYB3AF3UW.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/2/KX/TS4U9JA0N6RFTSYB3AF3UW.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/EI/79GRGFZDLD7WNT0UMMNZOB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/EI/79GRGFZDLD7WNT0UMMNZOB.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/LM/EFUJN84GXXO4YVUSE1Q6WG.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/LM/EFUJN84GXXO4YVUSE1Q6WG.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/8/JJ/9MI4Q2964JWFX5L5KTLYR0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/8/JJ/9MI4Q2964JWFX5L5KTLYR0.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/AU/HP8VK0BICPAP29LG323FCG.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/AU/HP8VK0BICPAP29LG323FCG.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EU/VRI9DVT1GF77I0DAT4ENKX.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EU/VRI9DVT1GF77I0DAT4ENKX.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EV/E9PA9NSNRXQ6JFWUO1VEW8.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EV/E9PA9NSNRXQ6JFWUO1VEW8.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/D/IH/IG4TU97KJU3U61DDGN9PHT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/D/IH/IG4TU97KJU3U61DDGN9PHT.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/4/OA/KV5NVW6RVGCY40C13H5F98.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/7/AM/99MZXH85XVTY7NU0J1OJ8N.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/9/20/PV6HCV4P0GX9P77B63TXTQ.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/9/EW/DIR8ZHVIQ96U3XBY7PSRNI.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GriffonController.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GriffonController.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +42,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/ucrt/corecrt_math.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/Runtime/Engine/Private/UnrealEngine.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/Boost/boost-1_70_0/include/boost/numeric/ublas/io.hpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/CEF3/CEF3.build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/Eigen/unsupported/test/cxx11_tensor_comparisons.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/include/cmath" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/sming/Documents/Unreal Projects/GriffonController/Source/GriffonController/GriffonControllerCharacter.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GriffonController/Private/SeaCreatureControllerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GriffonController/Public/SeaCreatureControllerCharacter.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -106,7 +130,10 @@
       <workItem from="1678945647548" duration="1941000" />
       <workItem from="1679023431578" duration="13883000" />
       <workItem from="1679042648895" duration="7395000" />
-      <workItem from="1679115083851" duration="18280000" />
+      <workItem from="1679115083851" duration="18909000" />
+      <workItem from="1679215998153" duration="28000" />
+      <workItem from="1679216093179" duration="753000" />
+      <workItem from="1679216997026" duration="3542000" />
     </task>
     <servers />
   </component>
