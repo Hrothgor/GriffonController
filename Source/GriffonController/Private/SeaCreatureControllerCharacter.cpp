@@ -129,5 +129,4 @@ void ASeaCreatureControllerCharacter::Tick(float DeltaTime)
 	float InterpSpeed = UKismetMathLibrary::MapRangeClamped(GetCharacterMovement()->Velocity.Length(),	0, 500,
 																											0.4, 4);
 	SetActorRotation(FMath::RInterpTo(GetActorRotation(), GetCharacterMovement()->Velocity.ToOrientationRotator(), DeltaTime, InterpSpeed));
-
 }

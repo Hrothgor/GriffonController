@@ -8,32 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98aa1c23-81ef-4daa-869e-2c4b13822fe0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CustomGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CustomGameMode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/4E/W6IBWQHRGVP815P7YPLIP1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/4E/W6IBWQHRGVP815P7YPLIP1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/QA/896728POOPHRPMOPAR0E22.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/QA/896728POOPHRPMOPAR0E22.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/2/KX/TS4U9JA0N6RFTSYB3AF3UW.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/2/KX/TS4U9JA0N6RFTSYB3AF3UW.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Input/Actions/IA_Fly.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/EI/79GRGFZDLD7WNT0UMMNZOB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/EI/79GRGFZDLD7WNT0UMMNZOB.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/LM/EFUJN84GXXO4YVUSE1Q6WG.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/LM/EFUJN84GXXO4YVUSE1Q6WG.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/8/JJ/9MI4Q2964JWFX5L5KTLYR0.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/8/JJ/9MI4Q2964JWFX5L5KTLYR0.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/AU/HP8VK0BICPAP29LG323FCG.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/AU/HP8VK0BICPAP29LG323FCG.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EU/VRI9DVT1GF77I0DAT4ENKX.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EU/VRI9DVT1GF77I0DAT4ENKX.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EV/E9PA9NSNRXQ6JFWUO1VEW8.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/EV/E9PA9NSNRXQ6JFWUO1VEW8.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/D/IH/IG4TU97KJU3U61DDGN9PHT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/D/IH/IG4TU97KJU3U61DDGN9PHT.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/4/OA/KV5NVW6RVGCY40C13H5F98.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/7/AM/99MZXH85XVTY7NU0J1OJ8N.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/9/20/PV6HCV4P0GX9P77B63TXTQ.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/NewMap/9/EW/DIR8ZHVIQ96U3XBY7PSRNI.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GriffonController.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GriffonController.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/Private/SeaCreatureControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/Private/SeaCreatureControllerCharacter.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +39,8 @@
     <setting file="file://$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GriffonController/Private/SeaCreatureControllerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GriffonController/Public/SeaCreatureControllerCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../spacegame/SpaceGame/Source/SpaceGame/Private/SpaceshipPlayerController.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../spacegame/SpaceGame/Source/SpaceGame/Public/SpaceshipPlayerController.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -133,7 +120,8 @@
       <workItem from="1679115083851" duration="18909000" />
       <workItem from="1679215998153" duration="28000" />
       <workItem from="1679216093179" duration="753000" />
-      <workItem from="1679216997026" duration="3542000" />
+      <workItem from="1679216997026" duration="3904000" />
+      <workItem from="1679275581696" duration="21649000" />
     </task>
     <servers />
   </component>

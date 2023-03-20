@@ -9,9 +9,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "Chaos/Utilities.h"
 #include "Kismet/KismetMathLibrary.h"
-
 
 //////////////////////////////////////////////////////////////////////////
 // AGriffonControllerCharacter
@@ -98,7 +96,6 @@ void AGriffonControllerCharacter::SetupPlayerInputComponent(class UInputComponen
 		//Fly
 		EnhancedInputComponent->BindAction(FlyAction, ETriggerEvent::Started, this, &AGriffonControllerCharacter::StartFlying);
 	}
-
 }
 
 void AGriffonControllerCharacter::Move(const FInputActionValue& Value)
