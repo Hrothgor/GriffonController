@@ -72,6 +72,18 @@ void ADruidControllerCharacter::BeginPlay()
 	}
 
 	AnimInstance = GetMesh()->GetAnimInstance();
+
+	if (W_ShapeShiftMenu) // Check if the Asset is assigned in the blueprint.
+	{
+		// Create the widget and store it.
+		ShapeShiftMenuInstance = CreateWidget<UShapeShiftMenu>( Cast<APlayerController>(GetController()), W_ShapeShiftMenu);
+
+		if (ShapeShiftMenuInstance)
+		{
+			//let add it to the view port
+			ShapeShiftMenuInstance->AddToViewport();
+		}
+	}
 }
 
 void ADruidControllerCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -90,7 +102,7 @@ void ADruidControllerCharacter::SetupPlayerInputComponent(class UInputComponent*
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ADruidControllerCharacter::Look);
 
 		//ShapeShift
-		EnhancedInputComponent->BindAction(ShapeShiftAction, ETriggerEvent::Started, this, &ADruidControllerCharacter::ShapeShift);
+		EnhancedInputComponent->BindAction(ShapeShiftAction, ETriggerEvent::Started, this, &ADruidControllerCharacter::StartShapeShifting);
 	}
 }
 
@@ -139,7 +151,7 @@ void ADruidControllerCharacter::Tick(float DeltaTime)
 	
 }
 
-void ADruidControllerCharacter::ShapeShift()
+void ADruidControllerCharacter::StartShapeShifting()
 {
 	if (GetMovementComponent()->IsFalling())
 		return;
@@ -154,12 +166,17 @@ void ADruidControllerCharacter::ShapeShift()
 			Location.Z -= GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
 			NS_ShapeShiftChargingInstance = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_ShapeShiftCharging, Location, GetActorRotation());
 		}
-	} else
-	{
-		bChargeShapeShift = false;
-		
-		AnimInstance->Montage_Play(CastShapeShiftMontage);
+
+		if (ShapeShiftMenuInstance)
+			ShapeShiftMenuInstance->Show();
 	}
+}
+
+void ADruidControllerCharacter::ShapeShift(EShapeShiftForm form)
+{
+	bChargeShapeShift = false;
+	
+	AnimInstance->Montage_Play(CastShapeShiftMontage);
 }
 
 bool ADruidControllerCharacter::IsChargingShapeShift() const

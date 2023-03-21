@@ -4,19 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "UObject/ObjectMacros.h"
+#include "EnumFile.h"
 #include "WerewolfCharacterMoveComponent.generated.h"
 
 /**
  * 
  */
-
-UENUM(BlueprintType)
-enum ECustomMovementMode
-{
-	CMOVE_Climbing      UMETA(DisplayName = "Climbing"),
-	CMOVE_MAX			UMETA(Hidden),
-};
 
 UCLASS()
 class GRIFFONCONTROLLER_API UWerewolfCharacterMoveComponent : public UCharacterMovementComponent

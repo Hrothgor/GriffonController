@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
 #include "NiagaraSystem.h"
+#include "ShapeShiftMenu.h"
 #include "DruidControllerCharacter.generated.h"
 
 UCLASS()
@@ -73,8 +74,9 @@ public:
 	///////////////////////////////
 	/// SHAPESHIFT
 
-	void ShapeShift();
-	
+	void StartShapeShifting();
+	void ShapeShift(EShapeShiftForm form);
+
 	bool bChargeShapeShift = false;
 	UFUNCTION(BlueprintPure)
 	bool IsChargingShapeShift() const;
@@ -93,4 +95,9 @@ public:
 	UAnimInstance* AnimInstance;
 	UPROPERTY(EditAnywhere)
 	UAnimMontage* CastShapeShiftMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	TSubclassOf<UUserWidget> W_ShapeShiftMenu;
+	UPROPERTY()
+	UShapeShiftMenu *ShapeShiftMenuInstance;
 };
