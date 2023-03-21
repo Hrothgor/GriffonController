@@ -115,10 +115,10 @@ public:
 	///////////////////
 	/// CLIMBING UP LEDGES
 
-	UPROPERTY(Category="Character Movement: Climbing", EditDefaultsOnly)
-	UAnimMontage* LedgeClimbMontage;
 	UPROPERTY()
 	UAnimInstance* AnimInstance;
+	UPROPERTY(Category="Character Movement: Climbing", EditDefaultsOnly)
+	UAnimMontage* LedgeClimbMontage;
 
 	bool TryClimbUpLedge() const;
 

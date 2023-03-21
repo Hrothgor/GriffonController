@@ -182,7 +182,7 @@ void AGriffonControllerCharacter::StopFlying()
 	FRotator rotation = GetActorRotation();
 	SetActorRotation(FRotator(0, rotation.Yaw, 0));
 
-	GetCharacterMovement()->Velocity /= 5; // Slow when landing
+	GetCharacterMovement()->Velocity /= 3; // Slow when landing
 }
 
 void AGriffonControllerCharacter::StopFlapping()
@@ -244,6 +244,7 @@ void AGriffonControllerCharacter::FlyPhysicsCompute(float DeltaSeconds)
 	// If can fly we add velocity UP/DOWN on Z (pretty much the flying system)
 	if (bCanFly)
 	{
+		
 		FVector ActualCharacterVelocity = GetCharacterMovement()->Velocity;
 
 		float TargetVelocityZ = ControlInclination *
@@ -271,14 +272,11 @@ void AGriffonControllerCharacter::FlyPhysicsCompute(float DeltaSeconds)
 	float TurnInclination = FVector::DotProduct(UKismetMathLibrary::GetRightVector(GetCharacterMovement()->Velocity.ToOrientationRotator()),
 												UKismetMathLibrary::GetForwardVector(FRotator(0, ActorRotation.Yaw, 0)));
 
-	float TurnInclinationAngle = (UKismetMathLibrary::DegAcos(TurnInclination) - 90) * 4; // 4 constant value, just the roll feel way better, it's too small else
-	TurnInclinationAngle = UKismetMathLibrary::FClamp(TurnInclinationAngle, -135, 135);
+	float TurnInclinationAngle = (UKismetMathLibrary::DegAcos(TurnInclination) - 90) * 3; // 3 constant value, just the roll feel way better, it's too small else
+	TurnInclinationAngle = UKismetMathLibrary::FClamp(TurnInclinationAngle, -110, 110);
 	
 	NewRotation.Roll = TurnInclinationAngle;
 	
-	GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0, FColor::Yellow, FString::Printf(TEXT("Roll: %f"), NewRotation.Roll));
-
-
 	FVector ActorRotationRightVector = UKismetMathLibrary::GetRightVector(ActorRotation);
 	NewRotation.Yaw = UKismetMathLibrary::MakeRotationFromAxes(VelocityForwardVector, ActorRotationRightVector, FVector::UpVector).Yaw;
 

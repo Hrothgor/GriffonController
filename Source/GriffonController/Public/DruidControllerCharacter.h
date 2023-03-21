@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "NiagaraSystem.h"
 #include "DruidControllerCharacter.generated.h"
 
 UCLASS()
@@ -36,6 +37,10 @@ class GRIFFONCONTROLLER_API ADruidControllerCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
+	/** ShapeShift Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* ShapeShiftAction;
+
 public:
 	// Sets default values for this character's properties
 	ADruidControllerCharacter();
@@ -61,5 +66,31 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaTime) override;//
+
+	bool bCanMove = true;
+	
+	///////////////////////////////
+	/// SHAPESHIFT
+
+	void ShapeShift();
+	
+	bool bChargeShapeShift = false;
+	UFUNCTION(BlueprintPure)
+	bool IsChargingShapeShift() const;
+	UFUNCTION(BlueprintCallable)
+	void EndShapeShiftCastNotify();
+
+	UPROPERTY(EditAnywhere)
+    UNiagaraSystem *NS_ShapeShiftCharging;
+	UPROPERTY()
+	UNiagaraComponent *NS_ShapeShiftChargingInstance;
+
+	UPROPERTY(EditAnywhere)
+	UNiagaraSystem *NS_ShapeShiftCast;
+
+	UPROPERTY()
+	UAnimInstance* AnimInstance;
+	UPROPERTY(EditAnywhere)
+	UAnimMontage* CastShapeShiftMontage;
 };

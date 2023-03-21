@@ -11,6 +11,8 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 
 // Sets default values
 ADruidControllerCharacter::ADruidControllerCharacter()
@@ -68,6 +70,8 @@ void ADruidControllerCharacter::BeginPlay()
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
+
+	AnimInstance = GetMesh()->GetAnimInstance();
 }
 
 void ADruidControllerCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -84,6 +88,9 @@ void ADruidControllerCharacter::SetupPlayerInputComponent(class UInputComponent*
 
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ADruidControllerCharacter::Look);
+
+		//ShapeShift
+		EnhancedInputComponent->BindAction(ShapeShiftAction, ETriggerEvent::Started, this, &ADruidControllerCharacter::ShapeShift);
 	}
 }
 
@@ -92,6 +99,8 @@ void ADruidControllerCharacter::Move(const FInputActionValue& Value)
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
 
+	if (!bCanMove)
+		return;
 	if (Controller != nullptr)
 	{
 		// find out which way is forward
@@ -128,4 +137,46 @@ void ADruidControllerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
+}
+
+void ADruidControllerCharacter::ShapeShift()
+{
+	if (GetMovementComponent()->IsFalling())
+		return;
+	
+	if (bChargeShapeShift == false)
+	{
+		bCanMove = false;
+		bChargeShapeShift = true;
+		if (NS_ShapeShiftCharging)
+		{
+			FVector Location = GetActorLocation();
+			Location.Z -= GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
+			NS_ShapeShiftChargingInstance = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_ShapeShiftCharging, Location, GetActorRotation());
+		}
+	} else
+	{
+		bChargeShapeShift = false;
+		
+		AnimInstance->Montage_Play(CastShapeShiftMontage);
+	}
+}
+
+bool ADruidControllerCharacter::IsChargingShapeShift() const
+{
+	return bChargeShapeShift;
+}
+
+void ADruidControllerCharacter::EndShapeShiftCastNotify()
+{
+	bCanMove = true;
+
+	if (NS_ShapeShiftCast)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_ShapeShiftCast, GetActorLocation(), GetActorRotation());
+	}
+	if (NS_ShapeShiftChargingInstance)
+	{
+		NS_ShapeShiftChargingInstance->DestroyInstance();
+	}
 }

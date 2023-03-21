@@ -9,29 +9,22 @@
   <component name="ChangeListManager">
     <list default="true" id="98aa1c23-81ef-4daa-869e-2c4b13822fe0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ABP_Werewolf.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ABP_Werewolf.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/AM_Werewolf_ClimbingLedges.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_CimbLedges.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbDown.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbDown.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbIdle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbIdle.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbLeft.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbLeft.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbRight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbRight.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbUp.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Falling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Falling.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Idle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Idle.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Jump.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Jump.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Landing.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Landing.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Running.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Running.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Walking.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Walking.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Climbing.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Climbing.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Walking.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Walking.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/BP_WerewolfControllerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/BP_WerewolfControllerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf_PhysicsAsset.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf_Skeleton.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/D5/6YQU2HMRAE1315U0TO437G.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/D5/6YQU2HMRAE1315U0TO437G.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platforms/HoloLens/Config/HoloLensEngine.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GriffonController/Private/WerewolfCharacterMoveComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/Private/WerewolfCharacterMoveComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CustomGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CustomGameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Druid/Animations/ABP_Druid.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Druid/Animations/ABP_Druid.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Druid/BP_DruidControllerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Druid/BP_DruidControllerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Druid/Meshes/SK_Druid_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Druid/Meshes/SK_Druid_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Griffon/C_VelocityAngleMultiplier.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Griffon/C_VelocityAngleMultiplier.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Griffon/C_VelocityLiftMultiplier.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Griffon/C_VelocityLiftMultiplier.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/44/J64ZPK6Y0MDMQSS0A7HQJS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/1/44/J64ZPK6Y0MDMQSS0A7HQJS.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/0J/KJKHLJFGCLMYTJGS602HN9.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/0J/KJKHLJFGCLMYTJGS602HN9.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/C/H0/LARV2G8AVSW6NLHU3AQ9W6.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/C/H0/LARV2G8AVSW6NLHU3AQ9W6.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GriffonController.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GriffonController.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonController.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonController.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/Private/DruidControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/Private/DruidControllerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/Public/DruidControllerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/Public/DruidControllerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/Public/WerewolfCharacterMoveComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/Public/WerewolfCharacterMoveComponent.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +42,17 @@
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/CEF3/CEF3.build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.1/Engine/Source/ThirdParty/Eigen/unsupported/test/cxx11_tensor_comparisons.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/include/cmath" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GriffonController.uproject" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GriffonController/Private/DruidControllerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GriffonController/Private/SeaCreatureControllerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GriffonController/Private/WerewolfCharacterMoveComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/GriffonController/Public/DruidControllerCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/GriffonController/Public/SeaCreatureControllerCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../spacegame/SpaceGame/Source/SpaceGame/Private/Asteroid.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../spacegame/SpaceGame/Source/SpaceGame/Private/SpaceshipPlayerController.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../spacegame/SpaceGame/Source/SpaceGame/Public/Asteroid.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../spacegame/SpaceGame/Source/SpaceGame/Public/SpaceshipPlayerController.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -136,7 +136,8 @@
       <workItem from="1679216997026" duration="3904000" />
       <workItem from="1679275581696" duration="24097000" />
       <workItem from="1679328059289" duration="476000" />
-      <workItem from="1679364761352" duration="1854000" />
+      <workItem from="1679364761352" duration="4865000" />
+      <workItem from="1679375192973" duration="5228000" />
     </task>
     <servers />
   </component>
