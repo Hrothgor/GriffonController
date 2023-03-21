@@ -9,16 +9,29 @@
   <component name="ChangeListManager">
     <list default="true" id="98aa1c23-81ef-4daa-869e-2c4b13822fe0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GriffonController.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CustomGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CustomGameMode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Input/Actions/IA_Fly.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/EI/79GRGFZDLD7WNT0UMMNZOB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/7/EI/79GRGFZDLD7WNT0UMMNZOB.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/GriffonControllerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GriffonController/Private/SeaCreatureControllerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/Private/SeaCreatureControllerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ABP_Werewolf.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ABP_Werewolf.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/AM_Werewolf_ClimbingLedges.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_CimbLedges.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbDown.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbDown.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbIdle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbIdle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbLeft.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbLeft.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbRight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbRight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_ClimbUp.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Falling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Falling.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Idle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Idle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Jump.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Jump.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Landing.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Landing.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Running.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Running.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Walking.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/ANIM_Werewolf_Walking.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Climbing.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Climbing.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Walking.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Animations/BS_Werewolf_Walking.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/BP_WerewolfControllerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/BP_WerewolfControllerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf_PhysicsAsset.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/WereWolf/Meshes/SK_Werewolf_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/D5/6YQU2HMRAE1315U0TO437G.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/NewMap/B/D5/6YQU2HMRAE1315U0TO437G.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platforms/HoloLens/Config/HoloLensEngine.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/GriffonController/Private/WerewolfCharacterMoveComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GriffonController/Private/WerewolfCharacterMoveComponent.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +134,9 @@
       <workItem from="1679215998153" duration="28000" />
       <workItem from="1679216093179" duration="753000" />
       <workItem from="1679216997026" duration="3904000" />
-      <workItem from="1679275581696" duration="21649000" />
+      <workItem from="1679275581696" duration="24097000" />
+      <workItem from="1679328059289" duration="476000" />
+      <workItem from="1679364761352" duration="1854000" />
     </task>
     <servers />
   </component>

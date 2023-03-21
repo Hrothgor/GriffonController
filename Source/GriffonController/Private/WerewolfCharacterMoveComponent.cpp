@@ -95,7 +95,7 @@ bool UWerewolfCharacterMoveComponent::EyeHeightTrace(const float TraceDistance) 
  	FHitResult UpperEdgeHit;
 
 	const float BaseEyeHeight = GetCharacterOwner()->BaseEyeHeight;
-	const float EyeHeightOffset = IsClimbing() ? BaseEyeHeight + ClimbingCollisionShrinkAmount * 2 : BaseEyeHeight;
+	const float EyeHeightOffset = IsClimbing() ? BaseEyeHeight + ClimbingCollisionShrinkAmount  : BaseEyeHeight;
 
 	const FVector Start = UpdatedComponent->GetComponentLocation() +
 			(UpdatedComponent->GetUpVector() * EyeHeightOffset);
@@ -199,7 +199,7 @@ void UWerewolfCharacterMoveComponent::PhysClimbing(float deltaTime, int32 Iterat
 	const FVector OldLocation = UpdatedComponent->GetComponentLocation();
 
 	MoveAlongClimbingSurface(deltaTime);
-
+	
 	TryClimbUpLedge();
 
 	if (!HasAnimRootMotion() && !CurrentRootMotion.HasOverrideVelocity())
