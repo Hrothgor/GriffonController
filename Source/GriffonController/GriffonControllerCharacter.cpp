@@ -9,6 +9,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "ShapeShiftManager.h"
 #include "Kismet/KismetMathLibrary.h"
 
 //////////////////////////////////////////////////////////////////////////
@@ -95,6 +96,9 @@ void AGriffonControllerCharacter::SetupPlayerInputComponent(class UInputComponen
 
 		//Fly
 		EnhancedInputComponent->BindAction(FlyAction, ETriggerEvent::Started, this, &AGriffonControllerCharacter::StartFlying);
+
+		//ShapeShift
+		EnhancedInputComponent->BindAction(ShapeShiftAction, ETriggerEvent::Started, this, &AGriffonControllerCharacter::StartShapeShifting);
 	}
 }
 
@@ -297,7 +301,7 @@ void AGriffonControllerCharacter::DrawDebug()
 	}
 }
 
-
-
-
-
+void AGriffonControllerCharacter::StartShapeShifting()
+{
+	GetShapeShiftManager()->ShapeShiftToForm(SSForm_Druid);
+}

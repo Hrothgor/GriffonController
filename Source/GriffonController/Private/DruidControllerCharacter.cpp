@@ -13,6 +13,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
+#include "ShapeShiftManager.h"
 
 // Sets default values
 ADruidControllerCharacter::ADruidControllerCharacter()
@@ -72,18 +73,6 @@ void ADruidControllerCharacter::BeginPlay()
 	}
 
 	AnimInstance = GetMesh()->GetAnimInstance();
-
-	if (W_ShapeShiftMenu) // Check if the Asset is assigned in the blueprint.
-	{
-		// Create the widget and store it.
-		ShapeShiftMenuInstance = CreateWidget<UShapeShiftMenu>( Cast<APlayerController>(GetController()), W_ShapeShiftMenu);
-
-		if (ShapeShiftMenuInstance)
-		{
-			//let add it to the view port
-			ShapeShiftMenuInstance->AddToViewport();
-		}
-	}
 }
 
 void ADruidControllerCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -148,7 +137,7 @@ void ADruidControllerCharacter::Look(const FInputActionValue& Value)
 void ADruidControllerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
 }
 
 void ADruidControllerCharacter::StartShapeShifting()
@@ -167,13 +156,14 @@ void ADruidControllerCharacter::StartShapeShifting()
 			NS_ShapeShiftChargingInstance = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_ShapeShiftCharging, Location, GetActorRotation());
 		}
 
-		if (ShapeShiftMenuInstance)
-			ShapeShiftMenuInstance->Show();
+		ShowShapeShiftMenu();
 	}
 }
 
 void ADruidControllerCharacter::ShapeShift(EShapeShiftForm form)
 {
+	ShapeToFormInto = form;
+	
 	bChargeShapeShift = false;
 	
 	AnimInstance->Montage_Play(CastShapeShiftMontage);
@@ -196,4 +186,23 @@ void ADruidControllerCharacter::EndShapeShiftCastNotify()
 	{
 		NS_ShapeShiftChargingInstance->DestroyInstance();
 	}
+
+	GetShapeShiftManager()->ShapeShiftToForm(ShapeToFormInto);
+}
+
+void ADruidControllerCharacter::ShowShapeShiftMenu()
+{
+	if (W_ShapeShiftMenu) // Check if the Asset is assigned in the blueprint.
+	{
+		// Create the widget and store it.
+		if (ShapeShiftMenuInstance == nullptr)
+			ShapeShiftMenuInstance = CreateWidget<UShapeShiftMenu>(Cast<APlayerController>(GetController()), W_ShapeShiftMenu);
+
+		//let add it to the view port
+		if (ShapeShiftMenuInstance)
+			ShapeShiftMenuInstance->AddToViewport();
+	}
+
+	if (ShapeShiftMenuInstance)
+		ShapeShiftMenuInstance->Show();
 }

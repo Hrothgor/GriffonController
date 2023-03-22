@@ -10,6 +10,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "EnumFile.h"
+#include "ShapeShiftManager.h"
 #include "Chaos/Utilities.h"
 #include "Kismet/KismetMathLibrary.h"
 
@@ -82,8 +84,10 @@ void ASeaCreatureControllerCharacter::SetupPlayerInputComponent(class UInputComp
 
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ASeaCreatureControllerCharacter::Look);
-	}
 
+		//ShapeShift
+		EnhancedInputComponent->BindAction(ShapeShiftAction, ETriggerEvent::Started, this, &ASeaCreatureControllerCharacter::StartShapeShifting);
+	}
 }
 
 void ASeaCreatureControllerCharacter::Move(const FInputActionValue& Value)
@@ -129,4 +133,9 @@ void ASeaCreatureControllerCharacter::Tick(float DeltaTime)
 	float InterpSpeed = UKismetMathLibrary::MapRangeClamped(GetCharacterMovement()->Velocity.Length(),	0, 500,
 																											0.4, 4);
 	SetActorRotation(FMath::RInterpTo(GetActorRotation(), GetCharacterMovement()->Velocity.ToOrientationRotator(), DeltaTime, InterpSpeed));
+}
+
+void ASeaCreatureControllerCharacter::StartShapeShifting()
+{
+	GetShapeShiftManager()->ShapeShiftToForm(SSForm_Druid);
 }

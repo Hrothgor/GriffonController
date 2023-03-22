@@ -2,13 +2,12 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "ShapeShiftForm.h"
 #include "SeaCreatureControllerCharacter.generated.h"
 
 UCLASS()
-class GRIFFONCONTROLLER_API ASeaCreatureControllerCharacter : public ACharacter
+class GRIFFONCONTROLLER_API ASeaCreatureControllerCharacter : public AShapeShiftForm
 {
 	GENERATED_BODY()
 
@@ -20,18 +19,12 @@ class GRIFFONCONTROLLER_API ASeaCreatureControllerCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
 	
-	/** MappingContext */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	class UInputMappingContext* DefaultMappingContext;
-
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* JumpAction;
-
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
-
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
@@ -63,4 +56,9 @@ public:
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	///////////////////////////////
+	/// SHAPESHIFT
+
+	virtual void StartShapeShifting() override;
 };

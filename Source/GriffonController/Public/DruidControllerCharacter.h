@@ -2,15 +2,14 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "GameFramework/Character.h"
 #include "InputActionValue.h"
 #include "NiagaraSystem.h"
+#include "ShapeShiftForm.h"
 #include "ShapeShiftMenu.h"
 #include "DruidControllerCharacter.generated.h"
 
 UCLASS()
-class GRIFFONCONTROLLER_API ADruidControllerCharacter : public ACharacter
+class GRIFFONCONTROLLER_API ADruidControllerCharacter : public AShapeShiftForm
 {
 	GENERATED_BODY()
 
@@ -22,25 +21,15 @@ class GRIFFONCONTROLLER_API ADruidControllerCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
 	
-	/** MappingContext */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	class UInputMappingContext* DefaultMappingContext;
-
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* JumpAction;
-
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
-
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
-
-	/** ShapeShift Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	class UInputAction* ShapeShiftAction;
 
 public:
 	// Sets default values for this character's properties
@@ -67,16 +56,18 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;//
+	virtual void Tick(float DeltaTime) override;
 
 	bool bCanMove = true;
 	
 	///////////////////////////////
 	/// SHAPESHIFT
 
-	void StartShapeShifting();
+	virtual void StartShapeShifting() override;
 	void ShapeShift(EShapeShiftForm form);
 
+	EShapeShiftForm ShapeToFormInto;
+	
 	bool bChargeShapeShift = false;
 	UFUNCTION(BlueprintPure)
 	bool IsChargingShapeShift() const;
@@ -87,7 +78,6 @@ public:
     UNiagaraSystem *NS_ShapeShiftCharging;
 	UPROPERTY()
 	UNiagaraComponent *NS_ShapeShiftChargingInstance;
-
 	UPROPERTY(EditAnywhere)
 	UNiagaraSystem *NS_ShapeShiftCast;
 
@@ -96,8 +86,10 @@ public:
 	UPROPERTY(EditAnywhere)
 	UAnimMontage* CastShapeShiftMontage;
 
+	void ShowShapeShiftMenu();
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 	TSubclassOf<UUserWidget> W_ShapeShiftMenu;
 	UPROPERTY()
-	UShapeShiftMenu *ShapeShiftMenuInstance;
+	UShapeShiftMenu *ShapeShiftMenuInstance = nullptr;
 };

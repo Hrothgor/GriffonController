@@ -10,6 +10,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "ShapeShiftManager.h"
 #include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
@@ -89,6 +90,9 @@ void AWerewolfControllerCharacter::SetupPlayerInputComponent(class UInputCompone
 
 		//Climbing
 		EnhancedInputComponent->BindAction(ClimbAction, ETriggerEvent::Started, this, &AWerewolfControllerCharacter::Climb);
+	
+		//ShapeShift
+		EnhancedInputComponent->BindAction(ShapeShiftAction, ETriggerEvent::Started, this, &AWerewolfControllerCharacter::StartShapeShifting);
 	}
 }
 
@@ -152,4 +156,9 @@ void AWerewolfControllerCharacter::Climb()
 		MovementComponent->CancelClimbing();
 	else
 		MovementComponent->TryClimbing();
+}
+
+void AWerewolfControllerCharacter::StartShapeShifting()
+{
+	GetShapeShiftManager()->ShapeShiftToForm(SSForm_Druid);
 }

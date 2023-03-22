@@ -18,6 +18,7 @@ enum ECustomMovementMode
 UENUM(BlueprintType)
 enum EShapeShiftForm
 {
+	SSForm_Druid			UMETA(DisplayName = "Druid"),
 	SSForm_Griffon			UMETA(DisplayName = "Griffon"),
 	SSForm_Werewolf			UMETA(DisplayName = "Werewolf"),
 	SSForm_SeaCreature		UMETA(DisplayName = "SeaCreature"),
